@@ -34,7 +34,8 @@
         <a href="#about" class="nav-link">About Us</a>
         <a href="#highlights" class="nav-link">Why Us</a>
         <a href="#cta" class="nav-link">Find Us</a>
-        <a href="HBTMenu.pdf" class="nav-btn" download="Highway_Bites_Menu.pdf">Download Menu</a>
+        <a href="#" id="nav-rate-btn" class="nav-link">Rate Us</a>
+        <a href="tel:+919115752574" class="nav-btn">Call Us</a>
       </nav>
 
       <button class="menu-toggle" aria-label="Toggle Navigation Menu">
@@ -84,20 +85,21 @@
               </svg>
               Open Fullscreen
             </a>
-            <a href="HBTMenu.pdf" class="viewer-btn btn-accent" download="Highway_Bites_Menu.pdf">
+            <a href="tel:+919115752574" class="viewer-btn btn-accent">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                 stroke-linecap="round" stroke-linejoin="round">
-                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                <polyline points="7 10 12 15 17 10"></polyline>
-                <line x1="12" y1="15" x2="12" y2="3"></line>
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
               </svg>
-              Download Menu
+              Call to Order
             </a>
           </div>
         </div>
 
         <!-- Viewer Container -->
         <div class="pdf-frame-wrapper glass">
+          <!-- Menu Image Display (Optimized for mobile compatibility) -->
+          <img src="k.png" alt="Highway Bites Menu" class="menu-display-img">
+
           <!-- Fallback message shown if iframe fails or is not supported -->
           <div class="pdf-fallback">
             <div class="fallback-icon">
@@ -148,13 +150,11 @@
               <polyline points="5 12 12 5 19 12"></polyline>
             </svg>
           </a>
-          <a href="HBTMenu.pdf" class="btn btn-secondary" download="Highway_Bites_Menu.pdf">
-            Download PDF
+          <a href="tel:+919115752574" class="btn btn-secondary">
+            Call to Order
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
               stroke-linecap="round" stroke-linejoin="round">
-              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-              <polyline points="7 10 12 15 17 10"></polyline>
-              <line x1="12" y1="15" x2="12" y2="3"></line>
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
             </svg>
           </a>
         </div>
@@ -317,6 +317,7 @@
             <li><a href="#about">About Us</a></li>
             <li><a href="#highlights">Why Us</a></li>
             <li><a href="#cta">Find Us</a></li>
+            <li><a href="#" id="footer-rate-btn">Rate Us</a></li>
           </ul>
         </div>
         <!-- hours and location -->
@@ -380,6 +381,40 @@
       </div>
     </div>
   </footer>
+
+  <!-- Rate Us Modal popup (triggers after 4 minutes) -->
+  <div id="rate-modal" class="rate-modal-overlay" aria-hidden="true" role="dialog" aria-labelledby="modal-title">
+    <div class="rate-modal-content glass">
+      <button class="modal-close-btn" id="modal-close" aria-label="Close Rating Dialog">&times;</button>
+      <div class="modal-body">
+        <div class="modal-icon" id="modal-icon">
+          <span id="modal-default-icon">⭐</span>
+          <div id="modal-hamster-container" class="modal-hamster-container" style="display: none;">
+            <img src="weeping_hamster.png" alt="Weeping Hamster Meme" class="modal-hamster-img">
+            <video id="sad-hamster-video" src="sad_hamster.mp4" loop playsinline style="display: none;"></video>
+          </div>
+        </div>
+        <h3 id="modal-title">Enjoying Highway Bites?</h3>
+        <p>Your feedback helps us serve you better! Rate us on Google and let us know what you think.</p>
+        
+        <div class="star-rating">
+          <span class="star" data-value="1" role="button" aria-label="Rate 1 Star">★</span>
+          <span class="star" data-value="2" role="button" aria-label="Rate 2 Stars">★</span>
+          <span class="star" data-value="3" role="button" aria-label="Rate 3 Stars">★</span>
+          <span class="star" data-value="4" role="button" aria-label="Rate 4 Stars">★</span>
+          <span class="star" data-value="5" role="button" aria-label="Rate 5 Stars">★</span>
+        </div>
+
+        <div class="modal-actions">
+          <!-- TODO(GoogleReviewLink): Replace the href below with your Google Review link from Google Business Profile -->
+          <a href="https://maps.app.goo.gl/JyqP1ExWnHn282v38" id="rate-submit-btn" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+            Rate on Google
+          </a>
+          <button id="rate-later-btn" class="btn btn-secondary">Maybe Later</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- Script Logic -->
   <script src="script.js"></script>
