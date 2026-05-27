@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Content Security Policy to prevent XSS and script injections -->
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; object-src 'self'; frame-src 'self';">
+
+  <title>Highway Bites - Gourmet Roadside Eats & Menu</title>
+  <meta name="description"
+    content="Discover the ultimate roadside dining experience at Highway Bites. View our menu, featuring gourmet burgers, fresh fries, and fast, quality eats.">
+
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- Header Navigation -->
+  <header>
+    <div class="nav-container">
+      <a href="#" class="logo">
+        <div class="logo-icon">
+          <!-- Fork and knife SVG icon -->
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M11 9H9V2H7v7H5V2H3v7c0 2.12 1.66 3.84 3.75 3.97V22h2.5v-8.03c2.09-.13 3.75-1.85 3.75-3.97V2H11v7zm10-7h-3v8h-2V2h-2v12c0 2.21 1.79 4 4 4v4h3v-4c2.21 0 4-1.79 4-4V2c0-1.1-.9-2-2-2z" />
+          </svg>
+        </div>
+        <span>Highway Bites</span>
+      </a>
+
+      <nav class="nav-links">
+        <a href="#menu" class="nav-link">Our Menu</a>
+        <a href="#highlights" class="nav-link">Why Us</a>
+        <a href="#about" class="nav-link">About Us</a>
+        <a href="#cta" class="nav-link">Find Us</a>
+        <a href="HBTMenu.pdf" class="nav-btn" download="Highway_Bites_Menu.pdf">Download Menu</a>
+      </nav>
+
+      <button class="menu-toggle" aria-label="Toggle Navigation Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Menu Viewer Section (Placed at the top for QR code scanners) -->
+  <section id="menu" class="menu-section" style="padding-top: 120px;">
+    <div class="container">
+      <div class="section-header animate-fade-in">
+        <span class="badge">📖 Welcome & Dine</span>
+        <h2 class="section-title">Our Menu</h2>
+        <p class="section-subtitle">Scan, choose, and enjoy! Scroll down for directions, hours, or to call in your order.</p>
+        
+        <!-- Mobile Direct Link (Highly recommended for 100% compatibility on phone scanners) -->
+        <div class="mobile-direct-link-container">
+          <a href="HBTMenu.pdf" class="btn btn-primary btn-mobile-menu" target="_blank" rel="noopener noreferrer">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+              <polyline points="15 3 21 3 21 9"></polyline>
+              <line x1="10" y1="14" x2="21" y2="3"></line>
+            </svg>
+            Tap to Open Menu in Full Screen
+          </a>
+        </div>
+      </div>
+
+      <div class="menu-viewer-container animate-fade-in delay-1">
+        <!-- Glassmorphic Viewer Header with controls -->
+        <div class="viewer-header glass">
+          <div class="viewer-info">
+            <span class="file-dot"></span>
+            <span class="file-name">HBTMenu.pdf</span>
+          </div>
+          <div class="viewer-actions">
+            <a href="HBTMenu.pdf" class="viewer-btn" target="_blank" rel="noopener noreferrer">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                <polyline points="15 3 21 3 21 9"></polyline>
+                <line x1="10" y1="14" x2="21" y2="3"></line>
+              </svg>
+              Open Fullscreen
+            </a>
+            <a href="HBTMenu.pdf" class="viewer-btn btn-accent" download="Highway_Bites_Menu.pdf">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+              Download Menu
+            </a>
+          </div>
+        </div>
+
+        <!-- Viewer Container -->
+        <div class="pdf-frame-wrapper glass">
+          <!-- Fallback message shown if iframe fails or is not supported -->
+          <div class="pdf-fallback">
+            <div class="fallback-icon">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+                <polyline points="10 9 9 9 8 9"></polyline>
+              </svg>
+            </div>
+            <div class="fallback-text">
+              <h4>PDF Inline Viewer</h4>
+              <p>Mobile browsers or privacy configurations might restrict loading PDFs directly inside the webpage.</p>
+              <a href="HBTMenu.pdf" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+                View Menu PDF
+              </a>
+            </div>
+          </div>
+
+          <!-- PDF Embedded Frame -->
+          <iframe src="HBTMenu.pdf#toolbar=0" class="pdf-iframe" title="Highway Bites Menu PDF Document"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Highlights / Features Section -->
+  <section id="highlights" class="highlights">
+    <div class="container">
+      <div class="section-header animate-fade-in">
+        <span class="badge">Our Standards</span>
+        <h2 class="section-title">What Makes Us Different</h2>
+        <p class="section-subtitle">We believe roadside food should be an absolute highlight of your road trip, not just
+          a compromise.</p>
+      </div>
+
+      <div class="highlights-grid">
+        <!-- Feature 1 -->
+        <div class="highlight-card glass animate-fade-in delay-1">
+          <div class="icon-box">
+            <!-- Burger/Food SVG -->
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M2 20h20"></path>
+              <path d="M20 16H4a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2z"></path>
+              <path d="M6 7c0-2.5 3-4 6-4s6 1.5 6 4"></path>
+              <path d="M12 11h.01"></path>
+              <path d="M8 11h.01"></path>
+              <path d="M16 11h.01"></path>
+            </svg>
+          </div>
+          <h3>Handcrafted Taste</h3>
+          <p>Every single burger is pressed, seasoned, and flame-grilled to order using 100% premium fresh beef and
+            house-made sauces.</p>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="highlight-card glass animate-fade-in delay-1">
+          <div class="icon-box">
+            <!-- Lightning bolt SVG -->
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+            </svg>
+          </div>
+          <h3>Lightning-Fast Service</h3>
+          <p>We respect your travel schedule. Our streamlined ordering flow gets fresh, steaming hot meals in your hands
+            in minutes.</p>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="highlight-card glass animate-fade-in delay-1">
+          <div class="icon-box">
+            <!-- Map marker SVG -->
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+          </div>
+          <h3>The Perfect Pitstop</h3>
+          <p>Easy highway access, plenty of parking spaces, clean facilities, and a cozy lounge to recharge before you
+            hit the road again.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hero/About Section -->
+  <section id="about" class="hero">
+    <div class="glow-orb orb-primary"></div>
+    <div class="glow-orb orb-secondary"></div>
+
+    <div class="hero-container">
+      <div class="hero-content animate-fade-in">
+        <span class="badge">🍔 Premium Pitstop</span>
+        <h1 class="hero-title">The Ultimate Pitstop for <em>Gourmet Eats</em></h1>
+        <p class="hero-desc">
+          Cruising down the highway or looking for a premium bite? Our kitchen is firing up fresh, customized burgers,
+          golden hand-cut fries, and milkshakes to fuel your journey. Taste the difference quality makes.
+        </p>
+        <div class="hero-actions">
+          <a href="#menu" class="btn btn-primary">
+            Back to Menu
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <line x1="12" y1="19" x2="12" y2="5"></line>
+              <polyline points="5 12 12 5 19 12"></polyline>
+            </svg>
+          </a>
+          <a href="HBTMenu.pdf" class="btn btn-secondary" download="Highway_Bites_Menu.pdf">
+            Download PDF
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-visual animate-fade-in delay-1">
+        <div class="image-card-wrapper">
+          <img src="hero_bg.png" alt="Delicious gourmet burger and crispy fries from Highway Bites" class="hero-image"
+            loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA and Contact Section -->
+  <section id="cta" class="cta-section">
+    <div class="container">
+      <div class="cta-card glass">
+        <h2 class="cta-title">Hungry on the Road?</h2>
+        <p class="cta-desc">
+          Drop by our convenient highway exit location or order ahead for quick, curbside pickup. Clean rest stops,
+          fresh burgers, and hot coffee await.
+        </p>
+
+        <div class="hero-actions">
+          <a href="HBTMenu.pdf" class="btn btn-primary" download="Highway_Bites_Menu.pdf">
+            Get the Menu (PDF)
+          </a>
+          <a href="tel:+919115752574" class="btn btn-secondary">
+            Call Ahead: +91 91157 52574
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Footer -->-->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" class="logo">
+            <div class="logo-icon">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M11 9H9V2H7v7H5V2H3v7c0 2.12 1.66 3.84 3.75 3.97V22h2.5v-8.03c2.09-.13 3.75-1.85 3.75-3.97V22h2.5v-8.03c2.09-.13 3.75-1.85 3.75-3.97V2H11v7zm10-7h-3v8h-2V2h-2v12c0 2.21 1.79 4 4 4v4h3v-4c2.21 0 4-1.79 4-4V2c0-1.1-.9-2-2-2z" />
+              </svg>
+            </div>
+            <span>Highway Bites</span>
+          </a>
+          <p class="footer-brand-text">Premium, handcrafted roadside comfort food prepared fresh for travelers and
+            locals alike.</p>
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Facebook">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+              </svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Twitter">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
+                </path>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#highlights">Why Us</a></li>
+            <li><a href="#menu">Our Menu</a></li>
+            <li><a href="#cta">Find Us</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Hours & Location</h4>
+          <ul class="hours-list">
+            <li><span>Location:</span> <span style="text-align: right;">Route 66, Exit 42</span></li>
+            <li><span>Mon - Thu:</span> <span>6:00 AM - 10:00 PM</span></li>
+            <li><span>Fri - Sun:</span> <span>6:00 AM - Midnight</span></li>
+            <li><span>Phone:</span> <span>(555) 123-4567</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Highway Bites. All rights reserved. Made for travelers everywhere.</p>
+        <p>
+          <a href="#" style="margin-right: 1rem;">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script Logic -->
+  <script src="script.js"></script>
+</body>
+
+</html>
