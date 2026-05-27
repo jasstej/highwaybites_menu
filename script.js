@@ -15,36 +15,16 @@ document.addEventListener('DOMContentLoaded', () => {
   // Mobile menu toggle
   if (menuToggle && navLinks) {
     menuToggle.addEventListener('click', () => {
-      // Basic toggle interaction. We can toggle class active on navLinks
-      const isActive = navLinks.classList.contains('mobile-active');
-      if (isActive) {
-        navLinks.classList.remove('mobile-active');
-        navLinks.style.display = 'none';
-      } else {
-        navLinks.classList.add('mobile-active');
-        navLinks.style.display = 'flex';
-        navLinks.style.flexDirection = 'column';
-        navLinks.style.position = 'absolute';
-        navLinks.style.top = '100%';
-        navLinks.style.left = '0';
-        navLinks.style.right = '0';
-        navLinks.style.background = 'rgba(13, 13, 15, 0.95)';
-        navLinks.style.backdropFilter = 'blur(12px)';
-        navLinks.style.padding = '2rem';
-        navLinks.style.borderBottom = '1px solid var(--border-color)';
-        navLinks.style.gap = '1.5rem';
-        navLinks.style.alignItems = 'center';
-      }
+      navLinks.classList.toggle('mobile-active');
+      menuToggle.classList.toggle('active');
     });
 
     // Close mobile menu when clicking a link
     const links = navLinks.querySelectorAll('a');
     links.forEach(link => {
       link.addEventListener('click', () => {
-        if (navLinks.classList.contains('mobile-active')) {
-          navLinks.classList.remove('mobile-active');
-          navLinks.style.display = '';
-        }
+        navLinks.classList.remove('mobile-active');
+        menuToggle.classList.remove('active');
       });
     });
   }

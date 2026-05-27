@@ -23,20 +23,16 @@
   <header>
     <div class="nav-container">
       <a href="#" class="logo">
-        <div class="logo-icon">
-          <!-- Fork and knife SVG icon -->
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M11 9H9V2H7v7H5V2H3v7c0 2.12 1.66 3.84 3.75 3.97V22h2.5v-8.03c2.09-.13 3.75-1.85 3.75-3.97V2H11v7zm10-7h-3v8h-2V2h-2v12c0 2.21 1.79 4 4 4v4h3v-4c2.21 0 4-1.79 4-4V2c0-1.1-.9-2-2-2z" />
-          </svg>
+        <div class="logo-img-wrapper">
+          <img src="HBTLOGO.png" alt="Highway Bites Logo" class="logo-img">
         </div>
         <span>Highway Bites</span>
       </a>
 
       <nav class="nav-links">
         <a href="#menu" class="nav-link">Our Menu</a>
-        <a href="#highlights" class="nav-link">Why Us</a>
         <a href="#about" class="nav-link">About Us</a>
+        <a href="#highlights" class="nav-link">Why Us</a>
         <a href="#cta" class="nav-link">Find Us</a>
         <a href="HBTMenu.pdf" class="nav-btn" download="Highway_Bites_Menu.pdf">Download Menu</a>
       </nav>
@@ -130,6 +126,49 @@
     </div>
   </section>
 
+  <!-- Hero/About Section -->
+  <section id="about" class="hero">
+    <div class="glow-orb orb-primary"></div>
+    <div class="glow-orb orb-secondary"></div>
+
+    <div class="hero-container">
+      <div class="hero-content animate-fade-in">
+        <span class="badge">🔥 Punjabi Swag</span>
+        <h1 class="hero-title">Made with <em>Punjabi Swag</em></h1>
+        <p class="hero-desc">
+          Stop by our premium lit-up food cart right on Chandigarh Road! Whether you're craving hot Momos, Kebabs, or
+          golden crispy fries, we've got you covered with flavor that stops traffic.
+        </p>
+        <div class="hero-actions">
+          <a href="#menu" class="btn btn-primary">
+            Back to Menu
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <line x1="12" y1="19" x2="12" y2="5"></line>
+              <polyline points="5 12 12 5 19 12"></polyline>
+            </svg>
+          </a>
+          <a href="HBTMenu.pdf" class="btn btn-secondary" download="Highway_Bites_Menu.pdf">
+            Download PDF
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-visual animate-fade-in delay-1">
+        <div class="image-card-wrapper" style="aspect-ratio: 4/3; max-width: 500px;">
+          <img src="cart_showcase.jpg" alt="Highway Bites Food Cart at Night on Chandigarh Road" class="hero-image"
+            loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Highlights / Features Section -->
   <section id="highlights" class="highlights">
     <div class="container">
@@ -192,72 +231,48 @@
     </div>
   </section>
 
-  <!-- Hero/About Section -->
-  <section id="about" class="hero">
-    <div class="glow-orb orb-primary"></div>
-    <div class="glow-orb orb-secondary"></div>
-
-    <div class="hero-container">
-      <div class="hero-content animate-fade-in">
-        <span class="badge">🔥 Punjabi Swag</span>
-        <h1 class="hero-title">Made with <em>Punjabi Swag</em></h1>
-        <p class="hero-desc">
-          Stop by our premium lit-up food cart right on Chandigarh Road! Whether you're craving hot Momos, Kebabs, or
-          golden crispy fries, we've got you covered with flavor that stops traffic.
-        </p>
-        <div class="hero-actions">
-          <a href="#menu" class="btn btn-primary">
-            Back to Menu
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-              stroke-linecap="round" stroke-linejoin="round">
-              <line x1="12" y1="19" x2="12" y2="5"></line>
-              <polyline points="5 12 12 5 19 12"></polyline>
-            </svg>
-          </a>
-          <a href="HBTMenu.pdf" class="btn btn-secondary" download="Highway_Bites_Menu.pdf">
-            Download PDF
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-              stroke-linecap="round" stroke-linejoin="round">
-              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-              <polyline points="7 10 12 15 17 10"></polyline>
-              <line x1="12" y1="15" x2="12" y2="3"></line>
-            </svg>
-          </a>
-        </div>
-      </div>
-
-      <div class="hero-visual animate-fade-in delay-1">
-        <div class="image-card-wrapper" style="aspect-ratio: 4/3; max-width: 500px;">
-          <img src="cart_showcase.jpg" alt="Highway Bites Food Cart at Night on Chandigarh Road" class="hero-image"
-            loading="lazy">
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- CTA and Contact Section -->
   <section id="cta" class="cta-section">
     <div class="container">
       <div class="cta-card glass">
-        <h2 class="cta-title">Hungry on the Road?</h2>
-        <p class="cta-desc">
-          We are located near **Phagwara Bypass, Purhiran, Chandigarh Road**. Click below to navigate directly to us
-          using Google Maps, or call ahead to pre-order!
-        </p>
+        <div class="cta-grid">
+          <div class="cta-content">
+            <h2 class="cta-title">Hungry on the Road?</h2>
+            <p class="cta-desc">
+              We are located near **Phagwara Bypass, Purhiran, Chandigarh Road**. Click below to navigate directly to us
+              using Google Maps, or call ahead to pre-order!
+            </p>
 
-        <div class="hero-actions">
-          <a href="https://www.google.com/maps?q=31.274306,75.685222" class="btn btn-primary" target="_blank"
-            rel="noopener noreferrer">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-              stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"></path>
-              <circle cx="12" cy="10" r="3"></circle>
-            </svg>
-            Get Directions
-          </a>
-          <a href="tel:+919115752574" class="btn btn-secondary">
-            Call to Order: +91 91157 52574
-          </a>
+            <div class="hero-actions">
+              <a href="https://maps.app.goo.gl/JyqP1ExWnHn282v38" class="btn btn-primary" target="_blank"
+                rel="noopener noreferrer">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                Get Directions
+              </a>
+              <a href="tel:+919115752574" class="btn btn-secondary">
+                Call to Order: +91 91157 52574
+              </a>
+            </div>
+          </div>
+
+          <div class="cta-qr-wrapper">
+            <img src="InstagramQRCode.png" alt="Instagram QR Code" class="cta-qr-image" loading="lazy">
+            <a href="https://www.instagram.com/highway_bites_hsp" class="cta-instagram-link" target="_blank"
+              rel="noopener noreferrer">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+              Follow @highway_bites_hsp
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -268,11 +283,8 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="#" class="logo">
-            <div class="logo-icon">
-              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M11 9H9V2H7v7H5V2H3v7c0 2.12 1.66 3.84 3.75 3.97V22h2.5v-8.03c2.09-.13 3.75-1.85 3.75-3.97V22h2.5v-8.03c2.09-.13 3.75-1.85 3.75-3.97V2H11v7zm10-7h-3v8h-2V2h-2v12c0 2.21 1.79 4 4 4v4h3v-4c2.21 0 4-1.79 4-4V2c0-1.1-.9-2-2-2z" />
-              </svg>
+            <div class="logo-img-wrapper">
+              <img src="HBTLOGO.png" alt="Highway Bites Logo" class="logo-img">
             </div>
             <span>Highway Bites</span>
           </a>
@@ -285,20 +297,13 @@
                 <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
               </svg>
             </a>
-            <a href="#" class="social-link" aria-label="Instagram">
+            <a href="https://www.instagram.com/highway_bites_hsp" class="social-link" aria-label="Instagram"
+              target="_blank" rel="noopener noreferrer">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                 stroke-linecap="round" stroke-linejoin="round">
                 <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
                 <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
                 <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-              </svg>
-            </a>
-            <a href="#" class="social-link" aria-label="Twitter">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round">
-                <path
-                  d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
-                </path>
               </svg>
             </a>
           </div>
@@ -308,20 +313,60 @@
           <h4 class="footer-title">Navigation</h4>
           <ul class="footer-links">
             <li><a href="#">Home</a></li>
-            <li><a href="#highlights">Why Us</a></li>
             <li><a href="#menu">Our Menu</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#highlights">Why Us</a></li>
             <li><a href="#cta">Find Us</a></li>
           </ul>
         </div>
-
+        <!-- hours and location -->
         <div>
           <h4 class="footer-title">Hours & Location</h4>
           <ul class="hours-list">
-            <li><span>Location: </span> <span style="text-align: right; font-size: 0.85rem;">Phagwara Bypass, Chandigarh
-                Road</span></li>
-            <li><span>Hours:</span> <span>Open Daily (Evening to Night)</span></li>
-            <li><span>Coordinates:</span> <span style="font-size: 0.8rem;">31°16'27.5"N 75°41'06.8"E</span></li>
-            <li><span>Phone:</span> <span>+91 91157 52574</span></li>
+            <li>
+              <div class="footer-info-item">
+                <span class="info-icon">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                </span>
+                <div>
+                  <span class="info-label">Location</span>
+                  <span class="info-value">Phagwara Bypass, Purhiran, Chandigarh Road</span>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="footer-info-item">
+                <span class="info-icon">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                </span>
+                <div>
+                  <span class="info-label">Hours</span>
+                  <span class="info-value">Open Daily except Tuesday <span class="info-subvalue">(Evening to Night)</span></span>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="footer-info-item">
+                <span class="info-icon">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 11 22 2 13 21 11 13 3 11"></polygon></svg>
+                </span>
+                <div>
+                  <span class="info-label">Coordinates</span>
+                  <span class="info-value"><a href="https://maps.app.goo.gl/JyqP1ExWnHn282v38" target="_blank" rel="noopener noreferrer" class="footer-info-link">31°29'41.3"N 75°53'39.3"E</a></span>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="footer-info-item">
+                <span class="info-icon">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                </span>
+                <div>
+                  <span class="info-label">Phone</span>
+                  <span class="info-value"><a href="tel:+919115752574" class="footer-info-link">+91 91157 52574</a></span>
+                </div>
+              </div>
+            </li>
           </ul>
         </div>
       </div>
