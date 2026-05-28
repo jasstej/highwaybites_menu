@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Content Security Policy to prevent XSS and script injections -->
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; object-src 'self'; frame-src 'self';">
+
+  <title>Highway Bites - Digital Visiting Card</title>
+  <meta name="description"
+    content="Access the digital business card for Highway Bites. Dial to order, get GPS navigation coordinates, save to contacts, or scan our Instagram QR code.">
+
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="card.css">
+</head>
+
+<body>
+
+  <!-- Floating Background Orbs -->
+  <div class="glow-orb orb-primary"></div>
+  <div class="glow-orb orb-secondary"></div>
+
+  <!-- Header / Navigation Back Link -->
+  <header class="card-header">
+    <div class="header-container">
+      <a href="index.html" class="back-link">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+          stroke-linecap="round" stroke-linejoin="round">
+          <line x1="19" y1="12" x2="5" y2="12"></line>
+          <polyline points="12 19 5 12 12 5"></polyline>
+        </svg>
+        <span>Back to Website</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Main Card Showcase Section -->
+  <main class="card-main">
+    <div class="card-container" id="cardContainer">
+      <div class="card" id="visitingCard" aria-label="Highway Bites Business Card. Click to flip.">
+        
+        <!-- FRONT OF THE CARD -->
+        <div class="card-side card-front glass">
+          <div class="card-reflection"></div>
+          <div class="card-content">
+            <div class="logo-outer-glow">
+              <div class="logo-wrapper">
+                <img src="HBTLOGO.png" alt="Highway Bites Logo" class="card-logo-img">
+              </div>
+            </div>
+            <h1 class="card-brand-name">Highway <span>Bites</span></h1>
+            <p class="card-punjabi-tagline">ਹਾਇਵੇ ਦਾ ਸਵੈਗ | ਘਰ ਦਾ ਸਵਾਦ</p>
+            <div class="card-divider"></div>
+            <span class="card-badge">🔥 Taste That Stops Traffic</span>
+            
+            <div class="card-flip-prompt">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"></path>
+              </svg>
+              <span>Tap to Flip Card</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- BACK OF THE CARD -->
+        <div class="card-side card-back glass">
+          <div class="card-reflection"></div>
+          <div class="card-content-back">
+            <div class="back-header">
+              <div class="back-logo-small">
+                <img src="HBTLOGO.png" alt="Highway Bites Small Logo">
+              </div>
+              <div class="back-header-text">
+                <h2>Highway Bites</h2>
+                <p>Taste That Stops Traffic</p>
+              </div>
+            </div>
+
+            <div class="back-details-grid">
+              <div class="details-list">
+                <!-- Phone -->
+                <div class="detail-item">
+                  <div class="detail-icon">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                    </svg>
+                  </div>
+                  <div class="detail-text">
+                    <span class="detail-label">Phone</span>
+                    <a href="tel:+919115752574" class="detail-link">+91 91157 52574</a>
+                  </div>
+                </div>
+
+                <!-- Location -->
+                <div class="detail-item">
+                  <div class="detail-icon">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"></path>
+                      <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                  </div>
+                  <div class="detail-text">
+                    <span class="detail-label">Location</span>
+                    <a href="https://maps.app.goo.gl/JyqP1ExWnHn282v38" target="_blank" rel="noopener noreferrer" class="detail-link">Phagwara Bypass, Purhiran</a>
+                  </div>
+                </div>
+
+                <!-- Coordinates -->
+                <div class="detail-item">
+                  <div class="detail-icon">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round">
+                      <polygon points="3 11 22 2 13 21 11 13 3 11"></polygon>
+                    </svg>
+                  </div>
+                  <div class="detail-text">
+                    <span class="detail-label">Coordinates</span>
+                    <a href="https://maps.app.goo.gl/JyqP1ExWnHn282v38" target="_blank" rel="noopener noreferrer" class="detail-link">31°29'41.3"N 75°53'39.3"E</a>
+                  </div>
+                </div>
+
+                <!-- Hours -->
+                <div class="detail-item">
+                  <div class="detail-icon">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round">
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                  </div>
+                  <div class="detail-text">
+                    <span class="detail-label">Hours</span>
+                    <span class="detail-value">Closed Tuesdays • Evening to Night</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Instagram QR Container -->
+              <div class="qr-container-back">
+                <img src="InstagramQRCode.png" alt="Instagram QR Code" class="card-qr-img">
+                <a href="https://www.instagram.com/highway_bites_hsp" target="_blank" rel="noopener noreferrer" class="qr-username">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                  </svg>
+                  <span>@highway_bites_hsp</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Quick action controls -->
+    <div class="card-actions-wrapper">
+      <button class="action-btn btn-flip" id="flipBtn" aria-label="Flip visiting card">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"></path>
+        </svg>
+        <span>Flip Card</span>
+      </button>
+
+      <div class="actions-grid">
+        <a href="tel:+919115752574" class="action-btn btn-primary" id="callBtn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+          </svg>
+          <span>Call to Order</span>
+        </a>
+
+        <a href="https://maps.app.goo.gl/JyqP1ExWnHn282v38" target="_blank" rel="noopener noreferrer" class="action-btn btn-secondary" id="mapsBtn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"></path>
+            <circle cx="12" cy="10" r="3"></circle>
+          </svg>
+          <span>Get Directions</span>
+        </a>
+
+        <button class="action-btn btn-secondary" id="saveContactBtn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+            <circle cx="8.5" cy="7" r="4"></circle>
+            <line x1="20" y1="8" x2="20" y2="14"></line>
+            <line x1="23" y1="11" x2="17" y2="11"></line>
+          </svg>
+          <span>Save Contact</span>
+        </button>
+
+        <button class="action-btn btn-secondary" id="shareBtn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="18" cy="5" r="3"></circle>
+            <circle cx="6" cy="12" r="3"></circle>
+            <circle cx="18" cy="19" r="3"></circle>
+            <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+            <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+          </svg>
+          <span>Share Card</span>
+        </button>
+
+        <button class="action-btn btn-secondary btn-fullwidth" id="printBtn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="6 9 6 2 18 2 18 9"></polyline>
+            <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+            <rect x="6" y="14" width="12" height="8"></rect>
+          </svg>
+          <span>Print Business Card</span>
+        </button>
+      </div>
+    </div>
+  </main>
+
+  <!-- Custom Alert Toast for copying URL -->
+  <div class="toast-notification" id="toastNotification" aria-live="polite">
+    <div class="toast-content">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+        stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="20 6 9 17 4 12"></polyline>
+      </svg>
+      <span id="toastMessage">Link copied to clipboard!</span>
+    </div>
+  </div>
+
+  <!-- JavaScript logic -->
+  <script src="card.js"></script>
+</body>
+
+</html>
